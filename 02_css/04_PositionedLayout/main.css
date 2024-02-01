@@ -1,87 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Positioned Layout</title>
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      /*
-        POSITIONED LAYOUT
-        - allows you to use the top, bottom, left, and right props
-        (which normally would do nothing)
-        - have to set position property to something
-      */
-      /*
-        RELATIVE POSITIONING
-        positions element relative to where
-        it would normally be in flow
-      */
-      .relative {
-        position: relative;
-        left: -50px;
-        bottom: 10px;
-      }
-      /*
-        FIXED POSITIONING
-        positions element in relation to the screen
-        (element always stays there)
-      */
-      .fixed {
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        z-index: 2; /* changes stacking order */
-      }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 1rem;
+  --blue: #003049;
+  --red: #d62828;
+  --orange: #f77f00;
+  --yellow: #fcbf49;
+  --beige: #eae2b7;
+  background-color: var(--beige);
+  text-align: center;
+}
 
-      /*
-        ABSOLUTE POSITIONING
-        positions element in relation to its container
-        - by default, container is screen
-        - if a parent is using positioned layout,
-        that will become the container
-      */
-      .absolute {
-        position: absolute;
-        top: -20px;
-        right: -20px;
-        z-index: 1;
-      }
+* {
+  box-sizing: border-box;
+}
 
-      /* create a positioned container for absolute */
-      .absolute-wrapper {
-        position: relative;
-      }
+section {
+  height: 100%;
+  border: 1px dotted black;
+}
 
-      /* STICKY POSITIONING
-         element gets positioned like normal,
-         then sticks in place after reaching the
-         specified positon as long as container is
-         on screen
-      */
-      .sticky {
-        position: sticky;
-        top: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <section class="relative-wrapper">
-      <h2>Relative Position</h2>
-      <div class="box relative"></div>
-    </section>
-    <section class="sticky-wrapper">
-      <h2>Sticky Position</h2>
-      <div class="box sticky"></div>
-    </section>
-    <section class="fixed-wrapper">
-      <h2>Fixed Position</h2>
-      <div class="box fixed"></div>
-    </section>
-    <section class="absolute-wrapper">
-      <h2>Absolute Position</h2>
-      <div class="box absolute"></div>
-    </section>
-  </body>
-</html>
+.box {
+  height: 4rem;
+  width: 4rem;
+}
+
+.fixed-wrapper {
+  color: var(--blue);
+}
+
+.fixed-wrapper .box {
+  background-color: var(--blue);
+}
+
+.absolute-wrapper {
+  color: var(--red);
+}
+
+.absolute-wrapper .box {
+  background-color: var(--red);
+}
+
+.sticky-wrapper {
+  color: var(--orange);
+}
+
+.sticky-wrapper .box {
+  background-color: var(--orange);
+}
+
+.relative-wrapper {
+  color: var(--yellow);
+}
+
+.relative-wrapper .box {
+  background-color: var(--yellow);
+}
