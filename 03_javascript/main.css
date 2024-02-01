@@ -1,0 +1,80 @@
+html {
+    --background: #606c38;
+    --dark: #283618;
+    --light: #fefae0;
+    background-color: var(--background);
+    margin: 0;
+    font-family: sans-serif;
+    color: var(--light);
+    font-size: 1.5rem;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  figure {
+    max-width: 800px;
+    margin: auto; /* centers */
+    margin-top: 20px;
+  }
+  
+  section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #page-title {
+    text-align: center;
+  }
+  
+  input {
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 5px 10px;
+  }
+  
+  .eight-ball {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .painting {
+    /* Working with Images in CSS
+    - typically set width to 100% (all of available space)
+    - can set a max-width and min-width to limit its growth
+    - get rid of extra whitespace by setting line height to 0
+    - use object-fit to control how image is cropped
+    */
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    line-height: 0;
+    background-color: var(--light);
+    padding: 20px;
+    border: 10px solid var(--dark);
+  }
+  
+  .attribution {
+    margin-top: 10px;
+    margin-left: auto; /* forces to furthest right side, auto takes up as much space */
+    margin-right: auto; /* in tandem with margin-left, sets to center */
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 10px;
+    font-size: 0.8rem;
+    width: fit-content; /* sets width to whatever is required by size of content */
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+  
+  .artist {
+    font-weight: 700;
+}
+  

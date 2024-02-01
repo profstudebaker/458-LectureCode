@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript Playground</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section>
+      <h1 id="page-title"> JavaScript!! </h1>
+    </section>
+    
+    <section class="eight-ball">
+          <h2> 8 Ball </h2>
+          <label>Ask a Question</label>
+          <input type="text"></input>
+          <button id="ask-btn">Ask</button>
+          <p id="response">Response: </p>
+    </section> 
+
+
+    <section class="addition">
+      <h2> Addition </h2>
+      <div>
+      <label> Number 1 </label>
+      <input type="number" id="n1"/>
+      </div>
+      <div>
+      <label> Number 2 </label>
+      <input type="number" id="n2"/>
+      </div>
+      <button id="add-btn">Add Me Together!</button>
+      <button id="clear">Clear</button>
+      <!-- this is where our p element will be added -->
+    </section>
+
+    <section class="gallery">
+      <h2> Gallery </h2>
+      <figure>
+        <img class="painting" id="img" src=""></img>
+            <!-- <figcaption class="attribution">
+              Water Lillies by <span class="artist"> Claude Monet </span>
+            </figcaption> -->
+            <button id="prev" disabled>Previous</button>
+            <button id="next">Next</button>
+      </figure>
+    </section> 
+    <!-- Add Script tag at end of body, so it runs after HTML has loaded -->
+    <script src="script.js"></script>
+  </body>
+</html>
