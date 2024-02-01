@@ -1,0 +1,16 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #264653;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: deeppink;
+  border-radius: 5px;
+}

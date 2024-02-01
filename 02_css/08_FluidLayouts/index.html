@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fluid Layout Demo</title>
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+      /* center our width-constrained container 
+         similar to margin: auto
+      */
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      /* allows us to take up all available space on smaller screens
+        but then width constrain over a certain threshold
+        */
+      main {
+        width: min(1500px, 100%);
+      }
+
+      /* FLUID TYPOGRAPHY */
+      .content {
+        /* font-size: 10rem; */
+        /* clamp: minimum bound, ideal value, maximum value */
+        font-size: clamp(1.5rem, 10vw, 10rem);
+      }
+
+      /* RESPONSIVE CARDS 
+      */
+      li {
+        min-width: 200px;
+        flex: 1;
+        height: 200px;
+        overflow: scroll;
+      }
+
+      .group {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      /* MDEIA QUERIES */
+      @media (max-width: 550px) {
+        /* apply these CSS styles 
+          when the width of the screen
+          is larger than 550px
+        */
+        .hide {
+          display: none;
+          /* background-color: green; */
+        }
+
+        li {
+          border-radius: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hide">HIDE ME</section>
+      <section class="content">Content</section>
+      <section>
+        <ul class="group">
+          <li>
+            .group { display: flex; gap: 10px; flex-wrap: wrap; } /* MDEIA
+            QUERIES */ @media (max-width: 550px) /* apply these CSS styles when
+            the width of the screen is larger than 550px */ .hide display: none;
+            /* backgrouns
+          </li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

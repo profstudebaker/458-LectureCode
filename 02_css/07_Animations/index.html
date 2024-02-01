@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Animations</title>
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+      /* PLAY AROUND WITH ANIMATIONS HERE */
+      /* Keyframes allow you to specify a custom css animation
+         you can animate essentially any property,
+         but opacity and transform are the most performance optimized
+         and can accomplish a lot of different tasks
+      */
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .box {
+        /* ending transition */
+        transition: transform 200ms;
+
+        /* apply our keyframe animation */
+        animation: fade-in 1s;
+        animation-delay: 2s; /* notice what this does without the property below */
+        animation-fill-mode: both; /* preserves starting and ending animation state */
+      }
+      .wrapper:hover .box {
+        /* starting transition */
+        transform: rotate(10deg);
+        transition: transform 600ms;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Wrapper added to prevent animation flicker -->
+    <div class="wrapper">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

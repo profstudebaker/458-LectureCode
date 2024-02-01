@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Selector Shootout</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      /* 
+        TODO: Experiment with different selectors to turn 
+        the appropriate list items pink. 
+      */
+      li { /* all li elements */
+        background: deeppink;
+      }
+
+      .item { /* any element with "item" class */
+        background: deeppink;
+      }
+
+      #selected { /* only the element with "selected" id */
+        background: deeppink;
+      }
+
+      li:nth-child(even) { /* every even nth li element */
+        background: deeppink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Selector Shootout</h1>
+    <ul>
+      <li class="item"></li>
+      <li class="item"></li>
+      <li class="item" id="selected"></li>
+      <li class="item"></li>
+      <li></li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  --dark-blue: rgb(24, 41, 41);
+  background: var(--dark-blue);
+  font-family: sans-serif;
+  color: var(--dark-blue);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  background: deeppink;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 24px;
+}

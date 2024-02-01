@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+      .grid {
+        display: grid;
+        /* the holy grail of css grid 
+           repeat(auto-fill, ... says make as many columns that fit
+           minmax(200px, 1fr) says the min width is 200, the max is as big as you can get in grid
+        */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: 100px;
+        grid-gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="grid">
+      <li>
+        <h2>33M</h2>
+        <h3>Subscribers</h3>
+      </li>
+      <li>
+        <h2>104M</h2>
+        <h3>Page Views</h3>
+      </li>
+      <li>
+        <h2>2min</h2>
+        <h3>Average Engaged Time</h3>
+      </li>
+      <li>
+        <h2>32K</h2>
+        <h3>Video Starts</h3>
+      </li>
+      <li>
+        <h2>$12K</h2>
+        <h3>Revenue</h3>
+      </li>
+    </ul>
+  </body>
+</html>

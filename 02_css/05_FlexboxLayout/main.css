@@ -1,0 +1,29 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #212121;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  height: 100%;
+  border: 5px dashed #212121;
+  padding: 10px;
+}
+
+.flex-item {
+  background-color: deeppink;
+  border-radius: 10px;
+  /* this quickly centers text inside each box
+    both vertically and horizontally */
+  display: grid;
+  place-items: center;
+}
