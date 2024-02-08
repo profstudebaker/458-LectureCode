@@ -11,21 +11,26 @@
         TODO: Experiment with different selectors to turn 
         the appropriate list items pink. 
       */
-      li { /* all li elements */
+      /* select all li elements */
+      /* li { 
         background: deeppink;
       }
 
-      .item { /* any element with "item" class */
+      /* select all elements with class "item" */
+      /* .item { 
+        background: orange;
+      }
+
+      #selected {
+        background: deeppink;
+      } */
+
+      /* pseudo-selector */
+      li:nth-child(1), li:nth-child(2) {
         background: deeppink;
       }
 
-      #selected { /* only the element with "selected" id */
-        background: deeppink;
-      }
-
-      li:nth-child(even) { /* every even nth li element */
-        background: deeppink;
-      }
+      
     </style>
   </head>
   <body>

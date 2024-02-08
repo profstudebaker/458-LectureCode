@@ -1,6 +1,6 @@
 html,
 body {
-  min-height: 100%;
+  min-height: auto;
 }
 body {
   background: #023047;

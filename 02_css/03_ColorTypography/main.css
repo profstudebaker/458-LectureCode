@@ -1,16 +1,35 @@
-/* Stripping some default styles */
+/* Stripping some default styles 
+Margin: 0 removes the white margin around the web page
+that is added in some browsers
+
+min-height: 100% ensures the body is the full height of the screen
+even if there is not enough content to fill it 
+*/
 html,
 body {
   margin: 0;
   min-height: 100%;
 }
 
+/* 
+border-box will calculate widths including the padding and border,
+instead of just the content (which is the default)
+*/
 * {
   box-sizing: border-box;
 }
 
-/* STYLE TOKENS */
+/* STYLE TOKENS 
+   we can use CSS variables to easily standardize our site's
+   aesthetic and make it easy to change to a new "theme"
+   - define variables on the html (or the root) so they are
+   accessible everywhere in your css
+   - to define a variable, syntax is: --VARIABLE-NAME: VALUE;
+   - to consume a variable, syntax is: var(--VARIABLE-NAME)
+   - you can use variables for any type of value/unit
+*/
 html {
+  /* defining our color palette */
   --color-primary: hsl(60, 100%, 100%);
   --color-secondary: hsl(230, 58%, 82%);
   --color-tertiary: hsl(351, 60%, 83%);
@@ -25,18 +44,57 @@ html {
   --color-gray-600: hsl(60, 10%, 15%);
   --color-gray-700: hsl(60, 10%, 10%);
 
+  /* We can use a base spacing unit to calculate 
+    small, medium, and large spacing off of it
+  */
   --spacing: 20px;
   --font: "Poppins", "Roboto", sans-serif;
+
+  /* for shadows */
+  --shadow-color: 255deg 89% 31%;
+  --shadow-elevation-low:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
 }
 
 /* Add some breathing room */
 body {
+  /* here we use the combo of calc() and our variables 
+    to create standardized, flexible spacing layouts
+  */
   padding: var(--spacing) calc(var(--spacing) * 2);
-  /* text wider than this is too hard to read */
+  /* text wider than this is too hard to read typically  */
   max-width: 60ch;
-  background-color: var(--color-bg);
+  /* background-color: var(--color-bg); */
   color: var(--color-secondary);
   font-family: var(--font);
+
+  background-image: linear-gradient(
+  205deg,
+  hsl(240deg 100% 20%) 0%,
+  hsl(249deg 98% 24%) 14%,
+  hsl(254deg 97% 29%) 29%,
+  hsl(258deg 96% 33%) 43%,
+  hsl(261deg 95% 38%) 57%,
+  hsl(264deg 96% 42%) 71%,
+  hsl(267deg 97% 46%) 86%,
+  hsl(269deg 100% 50%) 100%
+);
 }
 
 .title,
@@ -45,7 +103,14 @@ body {
 }
 
 .title {
+  /* font weight should correspond to a font you have imported
+   or linked in your HTML
+  */
   font-weight: 900;
+  /* rem units are more responsive than pixels, they are
+    a ratio-based unit in relation to the font-size set on the root element
+    (usually around 16px) 
+  */
   font-size: 3rem;
   line-height: 1;
   margin: 0;
@@ -75,6 +140,25 @@ p {
   font-weight: 200;
 }
 
+/* We can use this to add white space between two elements
+   instead of adding margin to one, because that gets hard
+   to maintain and debug later on
+*/
 .spacer {
   height: var(--spacing);
+}
+
+button {
+  width: 100%; 
+  padding: var(--spacing) 0;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border-radius: 10px;
+  border: none;
+  /* set an element to have the text properties of its container 
+    using the inherit keyword
+  */
+  font-family: inherit;
+  font-size: inherit;
+  box-shadow: var(--shadow-elevation-high);
 }
