@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Google Icons */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+.guess {
+    border: 2px solid gray;
+    font-size: 3rem;
+}
+
+
+.key {
+    background-color: lightgrey;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.used {
+    background-color: gray;
+}
+
+button {
+    border: none;
+    font: inherit;
+}

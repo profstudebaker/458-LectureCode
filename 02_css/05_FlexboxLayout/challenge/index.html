@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Positioned Layout</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+        /* Task 1 
+            Use flexbox to layout the header with the hamburger menu on the left, 
+            heading in the center, and icons on the right
+        */
+        
+        /* 
+        Task 2
+        Use flexbox to implement the keyboard layout
+      */
+      
+      /* Task 3 
+        Set up the grid of words and the grid for letters. 
+        Make sure letters are in the center of their container, 
+        and set different background colors for "wrong" "correct" "almost"
+      */
+
+      /* 
+        Task 3
+        Center the letter grid and keyboard on the screen
+        (use whatever layout technique you want for this)
+      */
+
+    </style>
+  </head>
+  <body>
+    <header>
+        <span class="material-symbols-outlined">
+            menu
+            </span>
+        <h1>Wordle</h1>
+        <div class="options">
+            <span class="material-symbols-outlined">help</span>
+            <span class="material-symbols-outlined">equalizer</span>
+            <span class="material-symbols-outlined">settings</span>
+        </div>
+    </header>
+    <main>
+    <section class="letter-grid">
+        <div class="guess wrong">C</div>
+        <div class="guess correct">O</div>
+        <div class="guess wrong">D</div>
+        <div class="guess wrong">E</div>
+        <div class="guess almost">R</div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>        
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>        
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+        <div class="guess"></div>
+    </section>
+    <section class="keyboard-container">
+        <div class="keyboard-row">
+            <button class="key">Q</button>
+            <button class="key">W</button>
+            <button class="key used">E</button>
+            <button class="key">R</button>
+            <button class="key">T</button>
+            <button class="key">Y</button>
+            <button class="key">U</button>
+            <button class="key">I</button>
+            <button class="key">O</button>
+            <button class="key">P</button>
+        </div>
+        <div class="keyboard-row">
+            <button class="key">A</button>
+            <button class="key">S</button>
+            <button class="key used">D</button>
+            <button class="key">F</button>
+            <button class="key">G</button>
+            <button class="key">H</button>
+            <button class="key">J</button>
+            <button class="key">K</button>
+            <button class="key">L</button>
+        </div>
+        <div class="keyboard-row">
+            <button class="key">Enter</button>
+            <button class="key">Z</button>
+            <button class="key">X</button>
+            <button class="key used">C</button>
+            <button class="key">V</button>
+            <button class="key">B</button>
+            <button class="key">N</button>
+            <button class="key">M</button>
+            <button class="key">Del</button>
+        </div>
+    </section>
+</main>
+  </body>
+</html>
