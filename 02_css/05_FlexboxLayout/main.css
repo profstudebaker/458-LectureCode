@@ -7,6 +7,7 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #212121;
   height: 100%;
+  font-size: 1.4rem;
 }
 
 * {
@@ -14,14 +15,16 @@ body {
 }
 
 .flex-container {
-  height: 100%;
   border: 5px dashed #212121;
   padding: 10px;
+  height: 100%;
 }
 
 .flex-item {
   background-color: deeppink;
   border-radius: 10px;
+  min-height: 100px;
+  min-width: 200px;
   /* this quickly centers text inside each box
     both vertically and horizontally */
   display: grid;
