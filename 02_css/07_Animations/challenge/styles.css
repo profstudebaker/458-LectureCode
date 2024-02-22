@@ -1,0 +1,15 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: rgb(72, 87, 102);
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+svg {
+  transform: scale(3);
+}
